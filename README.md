@@ -1,0 +1,2 @@
+# ForJavaRush
+Test lesson
