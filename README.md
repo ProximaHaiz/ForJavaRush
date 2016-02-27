@@ -1,6 +1,6 @@
 # ForJavaRush
 
-Database name : test /n
+Database name : test 
 Table name : user
 login: root
 password: root
