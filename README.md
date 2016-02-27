@@ -7,3 +7,5 @@ Table name : user
 login: root
 
 password: root
+
+url: /*
