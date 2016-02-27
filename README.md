@@ -1,2 +1,6 @@
 # ForJavaRush
-Test lesson
+
+Database name : test
+Table name : user
+login: root
+password: root
