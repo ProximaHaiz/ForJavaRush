@@ -23,14 +23,10 @@ public class CRUDImpl {
         }
     }
 
-
     public void save(UserEntity user) {
         UserService service = ctx.getBean("jpaContactService", UserService.class);
         service.save(user);
     }
-
-
-   
 
     public List<UserEntity> findAll() {
         UserService userService = ctx.getBean("jpaContactService", UserService.class);
