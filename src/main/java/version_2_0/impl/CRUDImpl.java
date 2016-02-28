@@ -30,26 +30,7 @@ public class CRUDImpl {
     }
 
 
-    /*public void save1() {
-        UserService service = ctx.getBean("jpaContactService", UserService.class);
-        ContactService contactService = new ContactService();
-        contactService.createDemoService();
-
-        Collection<UserEntity> values = contactService.contacts.values();
-
-        for (UserEntity user : values) {
-            UserEntity userToSave = new UserEntity(user.getName(), user.getAge(),
-                    user.getAdmin(), user.getCreatedDate());
-            service.save(userToSave);
-        }
-        System.out.println(contactService.contacts);
-    }*/
-
-
-   /* public void findAllByName() {
-        UserService userService = ctx.getBean("jpaContactService", UserService.class);
-        printAll(userService.findByName("Alice"));
-    }*/
+   
 
     public List<UserEntity> findAll() {
         UserService userService = ctx.getBean("jpaContactService", UserService.class);
