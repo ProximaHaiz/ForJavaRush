@@ -8,13 +8,7 @@ import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * Separate Java service class. Backend implementation for the address book
- * application, with "detached entities" simulating real world DAO. Typically
- * these something that the Java EE or Spring backend services provide.
- */
-// Backend service class. This is just a typical Java backend implementation
-// class and nothing Vaadin specific.
+
 public class ContactService {
 
     CRUDImpl CRUDImpl = new CRUDImpl();
@@ -37,14 +31,11 @@ public class ContactService {
 
         System.out.println(contacts);
     }
-
-
-    //    // Create dummy data by randomly combining first and last names
+    
     static String[] fnames = {"Peter", "Alice", "John", "Mike", "Olivia",
             "Nina", "Alex", "Rita", "Dan", "Umberto", "Henrik", "Rene", "Lisa",
             "Linda", "Timothy", "Daniel", "Brian", "George", "Scott",
             "Jennifer"};
-
 
     public void createDemoService() {
 
