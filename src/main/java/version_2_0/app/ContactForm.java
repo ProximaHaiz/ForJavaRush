@@ -15,14 +15,7 @@ import version_2_0.entities.UserEntity;
 
 import java.sql.Timestamp;
 
-/* Create custom UI Components.
- *
- * Create your own Vaadin components by inheritance and composition.
- * This is a form component inherited from VerticalLayout. Use
- * Use BeanFieldGroup to bind data fields from DTO to UI fields.
- * Similarly named field by naming convention or customized
- * with @PropertyId annotation.
- */
+
 public class ContactForm extends FormLayout implements ClickListener {
 
     Button save = new Button("Save", this);
@@ -49,7 +42,6 @@ public class ContactForm extends FormLayout implements ClickListener {
         dateField.setDateFormat("yyyy.MM.dd");
         dateField.setWidth(200, Unit.PIXELS);
         birthDate.setVisible(false);
-//        birthDate.setDateFormat("yyyy.MM.dd. HH:mm:ss");
         birthDate.addValueChangeListener((e) -> {
             Notification.show(e.getProperty().getValue().toString(), Type.WARNING_MESSAGE);
         });
