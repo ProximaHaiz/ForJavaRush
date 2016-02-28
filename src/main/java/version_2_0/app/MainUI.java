@@ -21,15 +21,9 @@ public class MainUI extends UI {
     Button newUser = new Button("New contact");
     Button addDataExample = new Button("Add Data");
 
-
-    // ContactForm is an example of a custom component class
     ContactForm contactForm = new ContactForm();
 
-    // ContactService is a in-memory mock DAO that mimics
-    // a real-world datasource. Typically implemented for
-    // example as EJB or Spring Data based service.
     ContactService service;
-
 
     @Override
     protected void init(VaadinRequest request) {
@@ -41,11 +35,8 @@ public class MainUI extends UI {
         buildLayout();
     }
 
-
     private void configureComponents() {
-        /**
-         * Save example data to the database
-         */
+      
         addDataExample.addClickListener((e) -> {
             service.createDemoService();
             refreshContacts();
@@ -63,7 +54,6 @@ public class MainUI extends UI {
         refreshContacts();
     }
 
-    //    Robust layouts
     private void buildLayout() {
         HorizontalLayout actions = new HorizontalLayout(filter, addDataExample, newUser);
         actions.setWidth("100%");
@@ -89,8 +79,7 @@ public class MainUI extends UI {
         addWindow(window);
 
     }
-
-
+    
     void refreshContacts() {
         refreshContacts(filter.getValue());
     }
@@ -101,7 +90,6 @@ public class MainUI extends UI {
                 UserEntity.class, service.findAll(stringFilter)));
         contactForm.setVisible(false);
     }
-
 
     @WebServlet(urlPatterns = "/*", asyncSupported = true)
     @VaadinServletConfiguration(ui = MainUI.class, productionMode = false)
