@@ -85,19 +85,6 @@ public class UserEntity implements Serializable, java.lang.Cloneable {
     public void setAdmin(Boolean admin) {
         isAdmin = admin;
     }
-//    @Type(type = "numeric_boolean")
-
-//    public boolean getAdmin() {
-//        return check != 0;
-//    }
-//
-//    public void setAdmin(boolean admin) {
-//        if (admin) {
-//            check = 1;
-//        } else check = 0;
-//
-//    }
-
 
     @Basic
     @Column(name = "createdDate")
